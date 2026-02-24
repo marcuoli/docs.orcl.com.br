@@ -1,0 +1,43 @@
+baseURL = "https://docs.orcl.com.br/"
+languageCode = "en-us"
+title = "orclT Docs"
+theme = "orcl-docs"
+enableRobotsTXT = true
+enableGitInfo = false
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 4
+    ordered = false
+  [markup.highlight]
+    style = "github-dark"
+    lineNos = false
+    noClasses = false
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]
+
+[params]
+  description = "User guides and CLI reference for Oracle DBA tools built by the orclT project."
+  github = "https://github.com/marcuoli/orclT"
+
+  [[params.tools]]
+    name = "orclT"
+    slug = "orclt"
+    icon = "database"
+    description = "Comprehensive Oracle DBA toolkit — performance monitoring, patching, LOB analysis, backup, and more."
+    repo = "https://github.com/marcuoli/orclT"
+    badge = "Oracle · DBA · TUI"
+
+[menus]
+  [[menus.main]]
+    name = "orclT"
+    url = "/orclt/"
+    weight = 10
+    [menus.main.params]
+      slug = "orclt"
